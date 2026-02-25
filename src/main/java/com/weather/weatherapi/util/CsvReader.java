@@ -1,6 +1,7 @@
 package com.weather.weatherapi.util;
 
 import com.opencsv.CSVReader;
+import com.weather.weatherapi.exception.CsvImportException;
 import com.weather.weatherapi.model.Weather;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,37 +13,44 @@ import java.util.List;
 
 public class CsvReader {
 
-    public static List<Weather> read(MultipartFile file) throws Exception {
+    public static List<Weather> read(MultipartFile file) {
 
-        List<Weather> list = new ArrayList<>();
+        try {
 
-        CSVReader reader =
-                new CSVReader(new InputStreamReader(file.getInputStream()));
+            List<Weather> list = new ArrayList<>();
 
-        String[] row;
-        reader.readNext(); // skip header
+            CSVReader reader =
+                    new CSVReader(new InputStreamReader(file.getInputStream()));
 
-        DateTimeFormatter formatter =
-                DateTimeFormatter.ofPattern("yyyyMMdd-HH:mm");
+            String[] row;
 
-        while ((row = reader.readNext()) != null) {
+            reader.readNext();
 
-            Weather w = new Weather();
+            DateTimeFormatter formatter =
+                    DateTimeFormatter.ofPattern("yyyyMMdd-HH:mm");
 
-            w.setDate(LocalDateTime.parse(row[0], formatter));
-            w.setCondition(row[1]);
+            while ((row = reader.readNext()) != null) {
 
-            w.setTemperature(parseDoubleSafe(row[2]));
-            w.setHumidity(parseDoubleSafe(row[3]));
-            w.setPressure(parseDoubleSafe(row[4]));
+                Weather w = new Weather();
 
-            list.add(w);
+                w.setDate(LocalDateTime.parse(row[0], formatter));
+                w.setCondition(row[1]);
+
+                w.setTemperature(parseDoubleSafe(row[2]));
+                w.setHumidity(parseDoubleSafe(row[3]));
+                w.setPressure(parseDoubleSafe(row[4]));
+
+                list.add(w);
+            }
+
+            return list;
+
+        } catch (Exception e) {
+            throw new CsvImportException(
+                    "CSV file format is invalid or contains bad data"
+            );
         }
-
-        return list;
     }
-
-    // ✅ THIS MUST BE OUTSIDE read()
     private static double parseDoubleSafe(String value) {
         if (value == null || value.trim().isEmpty()) {
             return 0.0;
