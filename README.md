@@ -38,7 +38,7 @@ http://localhost:8076
 
 <h2>🌐 API Endpoints</h2>
 <br>
-<h2></h2>POST:Posting the CSV file</h2>
+<h2>POST:Posting the CSV file</h2>
 <br>
 <img width="1600" height="556" alt="image" src="https://github.com/user-attachments/assets/d54ec711-b38e-4af9-bb8e-161b36410d6c" />
 <br>
