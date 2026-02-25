@@ -50,7 +50,7 @@ http://localhost:8076/weather/stats?year=1999
 
 📊 Get Temperature Statistics
 <br>
-http://localhost:8076/weather/stats?year=1996&month=12
+http://localhost:8076/weather/stats?year=1999
 
 <img width="869" height="882" alt="image" src="https://github.com/user-attachments/assets/97ba1f58-6a37-40a3-9118-baae1e012795" />
 
