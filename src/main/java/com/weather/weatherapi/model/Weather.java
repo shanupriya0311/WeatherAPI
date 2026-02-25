@@ -19,7 +19,7 @@ public class Weather {
     private double humidity;
 
     private double pressure;
-     private double heatIndex;
+  
 
     public String getId() {
         return id;
@@ -56,12 +56,6 @@ public class Weather {
     }
     public void setPressure(double pressure) {
         this.pressure = pressure;
-    }
-    public double getHeatIndex() {
-        return heatIndex;
-    }
-    public void setHeatIndex(double heatIndex) {
-        this.heatIndex = heatIndex;
     }
    
 }
