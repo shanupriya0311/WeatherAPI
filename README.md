@@ -39,19 +39,15 @@ http://localhost:8076
 <h2>🌐 API Endpoints</h2>
 POST:
 <br>
-http://localhost:8076/weather/import
 <img width="1600" height="556" alt="image" src="https://github.com/user-attachments/assets/d54ec711-b38e-4af9-bb8e-161b36410d6c" />
 
 📊Get Weather Data by Month
 <br>
-http://localhost:8076/weather/stats?year=1999
 <img width="1007" height="977" alt="image" src="https://github.com/user-attachments/assets/c8ea1a68-bfa8-45c1-be8b-6101fcf45b5f" />
 
 
 📊 Get Temperature Statistics
 <br>
-http://localhost:8076/weather/stats?year=1999
-
 <img width="869" height="882" alt="image" src="https://github.com/user-attachments/assets/97ba1f58-6a37-40a3-9118-baae1e012795" />
 
 
