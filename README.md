@@ -45,11 +45,14 @@ http://localhost:8076/weather/import
 📊Get Weather Data by Month
 <br>
 http://localhost:8076/weather/stats?year=1996&month=11
-<img width="869" height="882" alt="image" src="https://github.com/user-attachments/assets/97ba1f58-6a37-40a3-9118-baae1e012795" />
+<img width="1007" height="977" alt="image" src="https://github.com/user-attachments/assets/c8ea1a68-bfa8-45c1-be8b-6101fcf45b5f" />
+
 
 📊 Get Temperature Statistics
 <br>
 http://localhost:8076/weather/stats?year=1996&month=11
-<img width="656" height="593" alt="image" src="https://github.com/user-attachments/assets/0d92a5a1-9fb9-4c60-b72a-66771b212e21" />
+
+<img width="869" height="882" alt="image" src="https://github.com/user-attachments/assets/97ba1f58-6a37-40a3-9118-baae1e012795" />
+
 
 
