@@ -1,8 +1,9 @@
-**** Weather API ****
+<h1>Weather API</h1>
 <br>
 A Spring Boot REST API that imports weather data from a CSV file, stores it in MongoDB, and provides monthly weather records and temperature statistics.
-
+<br>
 🚀Key Features
+<br>
 
 ⚡Upload CSV file and save weather data to MongoDB
 
@@ -15,6 +16,7 @@ A Spring Boot REST API that imports weather data from a CSV file, stores it in M
 ⚡Handles empty numeric fields safely
 
 ⚡Multipart file upload support
+<br>
 
 🛠 Technology Stack
 Java 21
